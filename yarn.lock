@@ -1106,6 +1106,14 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/reactstrap@^8.4.2":
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/@types/reactstrap/-/reactstrap-8.4.2.tgz#e7066d0e67e2924dab0a52c6aedcf922f2be53b6"
+  integrity sha512-ag4hfFqBZaeoNSSTKjCtedvdcO68QqqlBrFd3obg94JSmhgNTmHz50BvNJkf9NjSzx1yGTW4l/OyP/khLPKqww==
+  dependencies:
+    "@types/react" "*"
+    popper.js "^1.14.1"
+
 "@types/styled-components@^4.1.18":
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-4.4.3.tgz#74dd00ad760845a98890a8539361d8afc32059de"
@@ -2591,6 +2599,11 @@ dot-prop@^5.2.0:
   integrity sha512-uEUyaDKoSQ1M4Oq8l45hSE26SnTxL6snNnqvK/VWx5wJhmff5z0FUVJDKDanor/6w3kzE3i7XZOk+7wC0EXr1A==
   dependencies:
     is-obj "^2.0.0"
+
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
@@ -4481,7 +4494,7 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.4:
+popper.js@^1.14.1, popper.js@^1.14.4:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==

@@ -23,7 +23,7 @@ export const BlogDetail = (props: BlogDetailProps) => {
         <div className="text-center meta">{`${post.publishedDate} / ${mainTag}`}</div>
       </header>
       <figure className="post-full-image text-center">
-        <Image src={post.heroImage.imageUrl} alt={post.heroImage.title} />
+        <Image src={(post.heroImage && post.heroImage.imageUrl) || ""} alt={(post.heroImage && post.heroImage.title ) || ""} />
       </figure>
       <section
         style={{ overflowY: "inherit", marginBottom: "2em" }}

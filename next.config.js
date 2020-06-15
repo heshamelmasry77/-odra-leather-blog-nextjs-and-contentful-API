@@ -1,6 +1,7 @@
 const withCss = require("@zeit/next-css");
 const withPlugins = require("next-compose-plugins");
 const TsConfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+require("dotenv").config();
 
 const nextConfig = {
   webpack: config => {

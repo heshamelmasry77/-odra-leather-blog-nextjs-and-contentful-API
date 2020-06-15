@@ -4,14 +4,14 @@ import NProgress from "nprogress";
 import { DefaultSeo } from "next-seo";
 
 const DEFAULT_SEO = {
-  title: "Blog Tutorial Web",
-  description: "Awesome blog tutorial website",
+  title: "Odra Leather Blog | مدونة جلود أودرا",
+  description: "جلود أودرا | منتجات جلدية عالية الجودة في مصر | Know more about leather with Odra Leather",
   openGraph: {
     type: "website",
     locale: "en",
-    title: "Blog Tutorial website",
-    description: "Awesome blog tutorial website",
-    site_name: "BlogTutorial"
+    title: "Odra Leather Blog | مدونة جلود أودرا",
+    description: "جلود أودرا | منتجات جلدية عالية الجودة في مصر | ",
+    site_name: "Odra Leather"
   }
 };
 
@@ -30,7 +30,7 @@ export default class CustomApp extends App {
   }
 
   componentDidCatch(error: any, errorInfo: any) {
-    console.log(error);
+    // console.log(error);
     super.componentDidCatch(error, errorInfo);
   }
 

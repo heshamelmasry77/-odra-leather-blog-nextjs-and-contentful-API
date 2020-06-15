@@ -4,11 +4,13 @@ import moment from "moment";
 
 export class BlogApi {
   client: ContentfulClientApi;
-
   constructor() {
+    // console.log(process.env.CONTENTFUL_SPACE_ID)
+    // console.log(process.env.CONTENTFUL_ACCESS_TOKEN)
+
     this.client = createClient({
-      space: "9lk5dcgffszt",
-      accessToken: "Q_89doAVg1Ej_uofqMv3mYl75ymOijDnwHhPT05Plt4"
+      space: process.env.CONTENTFUL_SPACE_ID,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
     });
   }
 

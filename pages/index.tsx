@@ -1,14 +1,45 @@
-import React, { Component } from "react";
+import React from "react";
 import { Layout } from "components/layout";
+import { BlogApi, BlogPost } from "services";
+import { BlogBox } from "components/blog";
 
-export default class Index extends Component {
+type BlogPageProps = {
+  entries: Array<BlogPost>;
+};
+
+export default class BlogPage extends React.Component<BlogPageProps> {
+  static async getInitialProps() {
+    const api = new BlogApi();
+    const entries = await api.fetchBlogEntries();
+    // console.log(entries)
+    return { entries };
+  }
+
+  renderBlogList = entries =>
+    entries.map((entry, i) => {
+      return (
+        <BlogBox
+          key={i}
+          id={entry.id}
+          slug={entry.slug}
+          imageUrl={(entry.heroImage && entry.heroImage.imageUrl) || ''}
+          title={entry.title}
+          author={entry.author.name}
+          description={entry.description}
+          tags={entry.tags}
+        />
+      );
+    });
+
   render() {
+    const { entries } = this.props;
+    // console.log(entries)
     return (
       <Layout>
-        <div className="row">
-          <div className="col-12">
-            <h1>Home Page</h1>
-          </div>
+        <h1 className="page-header">Blog</h1>
+        <div className="row mt-3">
+          {entries.length > 0 && this.renderBlogList(entries)}
+          {entries.length == 0 && <div>No Blog Posts</div>}
         </div>
       </Layout>
     );

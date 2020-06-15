@@ -38,6 +38,8 @@ export default class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="icon" type="image/png" href="/favicon.png"/>
+          <link rel="icon" type="image/png" href="https://odraleather.com/blog/favicon.png"/>
           <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

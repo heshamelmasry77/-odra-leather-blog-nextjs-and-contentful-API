@@ -1,6 +1,9 @@
+// @ts-ignore
 import React from "react";
 import "./style.css";
+// @ts-ignore
 import styled from "styled-components";
+// @ts-ignore
 import Link from "next/link";
 
 type ImageContainerProps = {
@@ -31,8 +34,8 @@ export const BlogBox = (props: BlogBoxProps) => {
   return (
     <div className={`col-lg-4 ${props.className} mt-3`}>
       <article className="card">
-        <ImageContainer imageUrl={props.imageUrl} className="card__img" />
-        <Link href="/blog/[slug]" as={`/blog/${props.slug}`} passHref>
+        {props.imageUrl && <ImageContainer imageUrl={props.imageUrl} className="card__img" />}
+        <Link href="/[slug]" as={`/${props.slug}`} passHref>
           <a className="card_link">
             <ImageContainer
               imageUrl={props.imageUrl}
@@ -45,7 +48,7 @@ export const BlogBox = (props: BlogBoxProps) => {
             <span className="card__category">{props.tags[0]}</span>
           )}
 
-          <Link href="/blog/[slug]" as={`/blog/${props.slug}`} passHref>
+          <Link href="/[slug]" as={`/${props.slug}`} passHref>
             <a style={{ color: "#000", textDecoration: "none" }}>
               <h3 className="card__title">{props.title}</h3>
             </a>
