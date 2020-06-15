@@ -1,0 +1,2 @@
+- name: Zeit Now CLI
+  uses: artemis-tech/zeit-now-cli@v1
